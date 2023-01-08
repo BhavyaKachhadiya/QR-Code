@@ -14,13 +14,13 @@ def qr():
     img = qrcode.make(url)
 
     # Save the QR code image to a buffer
-    buffer = io. BytesIO()
-    img. save(buffer, format= 'PNG') 
+    buffer = io.BytesIO()
+    img.save(buffer, format= 'PNG') 
     buffer.seek(0)
     # Create the response object
-    response = make_response(buffer. getvalue())
+    response = make_response(buffer.getvalue())
     response.mimetype = 'image/png'
-    response. headers ['Content-Disposition'] - 'attachment; filename=qr.png'
+    response. headers ['Content-Disposition'] = 'attachment; filename=qr.png'
     # Return the response
     return response
 
