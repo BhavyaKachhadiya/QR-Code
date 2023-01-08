@@ -20,7 +20,7 @@ def qr():
     # Create the response object
     response = make_response(buffer.getvalue())
     response.mimetype = 'image/png'
-    response. headers ['Content-Disposition'] = 'attachment; filename=qr.png'
+    response.headers['Content-Disposition'] = 'attachment; filename=qr.png'
     # Return the response
     return response
 
