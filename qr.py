@@ -4,7 +4,7 @@ import io
 
 app = Flask(__name__)
 
-@app.route('/qr', methods= ['GET'])
+@app.route('/QR-Code/qr', methods= ['GET'])
 def qr():
 
     # Get the URL from the query string
